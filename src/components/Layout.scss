@@ -1,0 +1,40 @@
+.main-wrapper {
+  padding: 3rem 0rem 1rem 0rem;
+  min-height: 100vh;
+
+  header {
+    flex: 0 1 40px;
+  }
+
+  main {
+    flex: 1 1 auto;
+  }
+
+  footer {
+    flex: 0 1 auto;
+  }
+}
+
+.project-links {
+  width: 70%;
+
+  @media (min-width: 375px) {
+    width: 60%;
+  }
+
+  @media (min-width: 500px) {
+    width: 50%;
+  }
+
+  @media (min-width: 576px) {
+    width: 40%;
+  }
+
+  @media (min-width: 768px) {
+    width: 30%;
+  }
+
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+}
