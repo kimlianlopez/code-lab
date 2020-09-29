@@ -2,7 +2,7 @@ import React from "react"
 
 import "./Layout.scss"
 
-const Layout = ({ title, children }) => {
+const Layout = ({ title, children, repoLink }) => {
   return (
     <div className="main-wrapper d-flex flex-column">
       <header className="main-header container mb-4">
@@ -17,7 +17,12 @@ const Layout = ({ title, children }) => {
             >
               View other Projects
             </a>
-            <a href="/" className="btn btn-secondary project-links">
+            <a
+              href={repoLink}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-secondary project-links"
+            >
               View on Github
             </a>
           </div>

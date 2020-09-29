@@ -6,8 +6,12 @@ import Snake from "../projects/Snake"
 
 const SnakeGame = ({ location }) => {
   return (
-    <Layout title="Snake Game" location={location}>
-      <Head title="Snake Game - just for fun" />
+    <Layout
+      title="Snake Game"
+      repoLink="https://github.com/kimlianlopez/code-lab/blob/master/src/projects/Snake.js"
+      location={location}
+    >
+      <Head title="Snake Game" />
       <Snake />
     </Layout>
   )
