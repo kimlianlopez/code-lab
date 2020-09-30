@@ -6,6 +6,7 @@ module.exports = {
       summary: `who lives and works in Knowhere, building unknown things.`,
     },
     description: `A code lab demonstrating what the unknown can do.`,
+    repoLink: `https://github.com/kimlianlopez/code-lab`,
     siteUrl: `https://code.thekimlopez.com`,
     social: {
       twitter: `kimlianlopez`,

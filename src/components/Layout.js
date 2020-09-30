@@ -1,8 +1,25 @@
 import React from "react"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
 import "./Layout.scss"
 
-const Layout = ({ title, children, repoLink }) => {
+const Layout = ({ title, children, projectName }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            repoLink
+          }
+        }
+      }
+    `
+  )
+
+  const basePath = "/blob/master/src/projects/"
+  const repoLink = `${site.siteMetadata.repoLink}${basePath}${projectName}`
+
   return (
     <div className="main-wrapper d-flex flex-column">
       <header className="main-header container mb-4">
@@ -17,14 +34,18 @@ const Layout = ({ title, children, repoLink }) => {
             >
               View other Projects
             </a>
-            <a
-              href={repoLink}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-secondary project-links"
-            >
-              View on Github
-            </a>
+            {projectName ? (
+              <a
+                href={repoLink}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-secondary project-links"
+              >
+                View on Github
+              </a>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </header>
@@ -40,6 +61,11 @@ const Layout = ({ title, children, repoLink }) => {
       </footer>
     </div>
   )
+}
+
+Layout.propTypes = {
+  title: PropTypes.string.isRequired,
+  projectName: PropTypes.string.isRequired,
 }
 
 export default Layout

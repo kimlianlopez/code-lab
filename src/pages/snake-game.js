@@ -5,13 +5,11 @@ import Head from "../components/Head"
 import Snake from "../projects/Snake"
 
 const SnakeGame = ({ location }) => {
+  const title = "Snake Game"
+
   return (
-    <Layout
-      title="Snake Game"
-      repoLink="https://github.com/kimlianlopez/code-lab/blob/master/src/projects/Snake.js"
-      location={location}
-    >
-      <Head title="Snake Game" />
+    <Layout title={title} projectName="Snake" location={location}>
+      <Head title={title} />
       <Snake />
     </Layout>
   )

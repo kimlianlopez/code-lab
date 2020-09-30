@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-import "./GooeySocialIcons.scss"
+import "./style.scss"
 
 // Gooey Link Component
 const GooeyLink = ({ i, link, icon, withLinks }) => {

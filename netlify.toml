@@ -2,4 +2,4 @@
   from = "/"
   to = "https://thekimlopez.com/portfolio"
   status = 301
-  force = false
+  force = true

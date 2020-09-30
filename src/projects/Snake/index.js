@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import { times, isEqual, head, last } from "lodash"
 import "@fortawesome/fontawesome-free/css/all.css"
 
-import "./Snake.scss"
+import "./style.scss"
 
 const getDirectionKeyword = code => {
   switch (code) {
